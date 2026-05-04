@@ -1,0 +1,100 @@
+{
+  "info": {
+    "name": "TP Streaming Musica",
+    "_postman_id": "12345",
+    "description": "Coleccion de endpoints para probar la API de streaming",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar canciones",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/canciones",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "canciones"]
+        }
+      }
+    },
+    {
+      "name": "Top 10",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/canciones/top10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "canciones", "top10"]
+        }
+      }
+    },
+    {
+      "name": "Ordenadas",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/canciones/ordenadas",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "canciones", "ordenadas"]
+        }
+      }
+    },
+    {
+      "name": "Playlist automatica",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/canciones/playlist?minutos=10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "canciones", "playlist"],
+          "query": [
+            {
+              "key": "minutos",
+              "value": "10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Busqueda binaria",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/canciones/buscar-binaria?titulo=Tema1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "canciones", "buscar-binaria"],
+          "query": [
+            {
+              "key": "titulo",
+              "value": "Tema1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Reproducir cancion",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8080/api/canciones/{{id}}/reproducir",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "canciones", "{{id}}", "reproducir"]
+        }
+      }
+    }
+  ]
+}
